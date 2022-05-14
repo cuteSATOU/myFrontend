@@ -1,0 +1,70 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet语法</title>
+    <style>
+        div {
+            /* fsz */
+            font-size: ;
+            /* 提示css属性:单词的首字母 */
+            /* fw大小 */
+            font-weight: 700;
+            /* bgc:颜色 */
+            background-color: red;
+            /* ....... */
+            /* 宽度300,高度200,背景色粉色 */
+            /* w300+h200+bgc:pink */
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 生成带类名:标签.类名 -->
+    <div class="one"></div>
+    <!-- 生成带ID:标签#ID -->
+    <div id="box"></div>
+    <!-- 同时生成类名和ID:标签.类名#ID -->
+    <div class="iii" id="ccc"></div>
+    <!-- div同级p:div+p -->
+    <div></div>
+    <p></p>
+    <!-- 父子:标签1>标签2 -->
+    <div>
+        <p></p>
+    </div>
+    <!-- 无序列表:ul>li -->
+    <ul>
+        <li></li>
+    </ul>
+    <!-- ul里面有3个li:ul>li*数量 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- ul里面有3个li还有内容:ul>li{内容}*数量 -->
+    <ul>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+    </ul>
+    <!-- ul有3个li,li文字1,2,3:ul>li{$}*数量 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
