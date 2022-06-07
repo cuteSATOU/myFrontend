@@ -1,0 +1,62 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS变量</title>
+    <script>
+        // 1.声明变量
+        var age;
+        // 2.给变量赋值
+        age = 20;
+        // 3.输出变量
+        console.log("年龄：" + age);
+        // 4.变量的初始化
+        var name = "安";
+        console.log("姓名：" + name);
+        // 5.更新变量
+        name = "古蕾雅";
+        console.log("更新后姓名：" + name);
+        // 6.同时声明多个变量
+        var anime = "玛纳利亚的密友",
+        company = "Cygames",
+        watchsites = "Bilibili";
+        console.log("番名：" + anime + ",公司：" + company + ",观看平台：" + watchsites);
+        // 7.声明变量特殊情况
+            // 情况①：var age;console.log(age);只声明不赋值；输出结果：undefined
+            // 情况②：console.log(age);   不声明不赋值，直接使用；输出结果：报错
+            // 情况③：age = 10;console.log(age);   不声明只赋值；输出结果：10
+        // 8.变量命名规范
+            /** 
+             * 由字母(A-Z,a-z)/数字(0-9)/下划线(_)/美元符号($)组成；
+             * 不能以数字开头；
+             * 不能是关键字/保留字；
+             * 变量名必须有意义；
+             * 遵守驼峰命名法,首字母小写,后面单词的首字母需要大写。
+            **/
+        // 9.交换两个变量的值
+        var tamp;   //声明一个空变量用来中转
+        var redApple = "红苹果";
+        var greenApple = "青苹果";
+        temp = redApple;   // 将redApple变量赋值给temp变量
+        redApple = greenApple;   //将greenApple变量赋值给redApple变量
+        greenApple = temp;   // 将temp变量赋值给greenApple变量，以实现redApple和greenApple两个变量的值的交换
+        console.log("redApple变量的值为：" + redApple + "/greenApple变量的值为：" + greenApple);
+
+        // 一.变量案例:弹出输入的用户名
+        var username = prompt("请输入用户名");
+        alert("用户名：" + username);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
