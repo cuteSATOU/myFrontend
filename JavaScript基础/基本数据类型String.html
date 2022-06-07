@@ -1,0 +1,50 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本数据类型:String</title>
+    <script>
+        // 1.字符串型可以是引号中的任何文本,其语法为双引号""和单引号''
+        var str = "安";
+        var str2 = '古蕾雅';
+        // 2.字符串引号嵌套,外双内单或者外单内双
+        var str3 = "'安'和'古蕾雅'";
+        console.log(str3);
+        // 3.字符串转义符:转义符都是以 \ 开头的
+            /**
+             * \n:换行符
+             * \\:斜杠 \
+             * \":双引号
+             * \':单引号
+             * \t:tab缩进
+             * \b:空格
+            **/
+        var str4 = "'安'\n和\n'古蕾雅'";
+        console.log(str4);
+        // 4.检测获取字符串长度:length
+        var str5 = "安和古蕾雅";
+        console.log(str5.length);
+        // 5.字符串拼接:多个字符串之间可以使用'+'进行拼接,不管字符串类型和其他任何类型拼接,输出的类型始终是字符串类型;数值相加,字符相连
+        console.log("安" + "和" + "古蕾雅");
+        console.log("安" + 16);
+        console.log("安" + true);
+        console.log("16" + 16);
+        console.log(8 + 8);   //2个数字型拼接按加法算
+        // 6.字符串拼接加强
+        var anAge = "16";
+        console.log("安" + anAge + "岁啦");   //和变量进行拼接
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
