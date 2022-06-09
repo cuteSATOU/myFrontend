@@ -1,0 +1,51 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型转换</title>
+    <script>
+        // 一、转换为字符串类型
+        // 方法①:toString()
+        var num = 1;
+        console.log(typeof num.toString());
+        // 方法②:String()强制转换
+        var num2 = 1;
+        console.log(typeof String(num));
+        // 方法③:加号拼接字符串
+        var num3 = 1;
+        console.log(typeof(num3+'安'));
+
+        // 二、转换为数字型,如果字符串内包含数字以外的其他字符,则:1.如果开头是数字,则转换开头数字,自动去除后面其他字符;2.如果开头不是数字,则返回NaN
+        // 方法①:parseInt()转换为整数数值型,如果是浮点型则取整
+        var str = "1";
+        console.log(typeof parseInt(str));
+        // 方法②:parseFloat()转换为浮点数值型
+        var str2 = "1.23";
+        console.log(typeof parseFloat(str2));
+        // 方法④:Number()强制转换
+        var str3 = "3";
+        console.log(typeof Number(str3));
+        // 方法④:js隐式转换(- * /)利用算术运算隐式转换
+        var str4 = "4";
+        console.log(typeof(str4-0));
+        console.log(typeof('100' - '99'));
+
+        // 三、转换为布尔型
+        // Boolean():代表空、否定的值会被转换为false,如'',null,undefined,NaN,0;其余值都会被转换为true
+        var str5 = "1";
+        console.log("转换结果" + Boolean(str5) + "判断数据类型:" + typeof Boolean(str5));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
