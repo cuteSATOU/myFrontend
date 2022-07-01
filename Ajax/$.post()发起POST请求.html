@@ -1,0 +1,42 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过$.post()发起POST请求</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        jQuery中$.post()函数的功能单一，专门用来发起POST请求，从而向服务器提交数据
+        语法如下：$.post(url,[data],[callback])
+        参数含义：
+        url:string,必选,提交数据的地址
+        data:object,非必选,要提交的数据
+        callback:function,非必选,数据提交成功时的回调函数
+    -->
+    <button id="btnPOST">发起POST请求</button>
+</body>
+<script>
+    $(function() {
+        $('#btnPOST').on('click',function() {
+            $.post('http://www.liulongbin.top:3006/api/addbook',
+            {bookname:'水浒传',author: '施耐庵',publisher:'天津图书出版社'},
+            function(res) {
+                console.log(res);
+            })
+        })
+    })
+</script>
+
+</html>
