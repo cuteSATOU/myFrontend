@@ -1,0 +1,64 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.ajax()函数</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 
+        相比于$.get()和$.post()函数,jQuery中提供的$.ajax()函数,是一个功能比较综合的函数,它允许我们对Ajax请求进行更详细的配置
+        基本语法如下：
+        $.ajax({
+            type:'',     请求的方式
+            url:'',     请求的url地址
+            data:{},     请求要携带的数据/参数
+            success: function(res){}     请求成功之后的回调函数
+        })
+     -->
+     <button id="btnDataGET">使用$.ajax()函数发起带参数的GET请求</button>
+     <button id="btnDataPOST">使用$.ajax()函数发起带参数的POST请求</button>
+</body>
+<script>
+    // 使用$.ajax()函数发起带参数的GET请求
+    $(function(){
+        $('#btnDataGET').on('click',function() {
+            $.ajax({
+                type: "GET",
+                url:'http://www.liulongbin.top:3006/api/getbooks',
+                data: {
+                    id:1
+                },
+                success: function(res){
+                    console.log(res);
+                }
+            })
+        })
+    })
+    
+    // 使用$.ajax()函数发起带参数的POST请求
+    $(function(){
+        $('#btnDataPOST').on('click',function() {
+            $.ajax({
+                type: "POST",
+                url:'http://www.liulongbin.top:3006/api/addbook',
+                data: {
+                    bookname:'砂糖的幸福生活',author: '键空富烧',publisher:'株式会社スクウェア・エニックス・ホールディングス'
+                },
+                success: function(res){
+                    console.log(res);
+                }
+            })
+        })
+    })
+</script>
+</html>
