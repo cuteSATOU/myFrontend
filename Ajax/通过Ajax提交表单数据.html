@@ -1,0 +1,52 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过Ajax提交表单数据</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        阻止表单默认提交行为：
+        当监听到表单的提交事件后,可以调用事件对象的 event.preventDefault() 函数,来阻止表单的提交和页面的跳转
+
+        快速获取表单中的数据：
+        为了简化表单中数据的获取操作,jQuery提供了 serialize() 函数,语法格式如下:
+        $(selector).serialize();
+        注意:在使用serialize()函数快速获取表单数据时,必须为每个表单元素添加name属性
+     -->
+    <form action="#" id="f1" method="post">
+        <input type="text" name="username" placeholder="用户名" id="username">
+        <input type="password" name="userpwd" id="userpwd" placeholder="密码">
+        <button type="submit">提交</button>
+    </form>
+</body>
+<script>
+    $(function () {
+        // 第一种表单提交监听方式
+        $('#f1').submit(function (e) {
+            alert("第一种方式监听表单提交事件");
+            e.preventDefault();     // 阻止表单默认提交行为
+            var data = $(this).serialize();
+            console.log(data);
+        })
+        // 第二种表单提交监听方式
+        // $("#f1").on('submit', function (e) {
+        //     alert('第二种方式监听表单提交事件');
+        //     e.preventDefault();     // 阻止表单默认提交行为
+        // })
+    })
+</script>
+
+</html>
