@@ -1,0 +1,58 @@
+<!--
+ * @Descripttion: 
+ * @Author: 砂糖酱
+ * @Email: 2222002781@qq.com
+ * @QQ: 2222002781
+ * @Bilibili: https://space.bilibili.com/11997556
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>art-template引擎模板的使用</title>
+    <!-- 1.导入模板引擎 -->
+    <script src="js/template-web.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <!-- 3.定义模板 -->
+    <!-- 注意:模板的HTML结构,必须定义到script中,type的值必须为text/html -->
+    <script type="text/html" id="tpl-user">
+        <h1>{{title}}</h1>
+        <div>
+            姓名: <span id="name">{{name}}</span>
+        </div>
+        <div>
+            年龄: <span id="age">{{age}}</span>
+        </div>
+        <div>
+            会员: <span id="isVip">{{if isVip == true}}是{{else if isVip == false}}否{{/if}}</span>
+        </div>
+        <div>
+            注册时间: <span id="regTime">{{regTime}}</span>
+        </div>
+    </script>
+</body>
+<script>
+    // 2.定义需要渲染的数据
+    var data = {
+        title: "用户信息",
+        name: "zs",
+        age: "20",
+        isVip: true,
+        regTime: new Date()
+    };
+
+    // 4.调用template函数
+    var htmlStr = template('tpl-user', data);
+    // 5.渲染HTML结构
+    $('#container').html(htmlStr);
+</script>
+
+</html>
